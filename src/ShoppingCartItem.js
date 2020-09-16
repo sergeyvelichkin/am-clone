@@ -6,7 +6,7 @@ function ShoppingCartItem({ id, title, price, image, rating }) {
     <div className="shoppingCartItem">
       <img className="shoppingCartItem__image" src={image} alt="" />
       <div className="shoppingCartItem__info">
-        <p>{title}</p>
+        <p className="shoppingCartItem__title">{title}</p>
         <p className="shoppingCartItem__price">
           <small>$</small>
           <strong>{price}</strong>
@@ -15,7 +15,9 @@ function ShoppingCartItem({ id, title, price, image, rating }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p>⭐</p>
+              <span role="img" aria-label="Star">
+                ⭐
+              </span>
             ))}
         </div>
         <button className="product__button">Remove from Basket</button>
