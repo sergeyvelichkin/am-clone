@@ -30,7 +30,7 @@ function Header() {
         <SearchIcon className="header__searchIcon" />
       </div>
       <div className="header__nav">
-        <Link to={!user && "/login"}>
+        <Link to={user ? "/" : "/login"}>
           <div onClick={handleAuth} className="header__option">
             <span className="header__optionFirstLine">
               Hello, {user ? user.email : "Guest"}

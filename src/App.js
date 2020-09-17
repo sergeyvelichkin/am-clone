@@ -9,7 +9,7 @@ import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 
 function App() {
-  const [dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
 
   useEffect(() => {
     // it will only run once when thr app loads
@@ -28,11 +28,12 @@ function App() {
         //user logged out
         dispatch({
           type: "SET_USER",
-          user: null,
+          user: authUser,
         });
       }
     });
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Router>

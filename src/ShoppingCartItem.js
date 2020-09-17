@@ -2,8 +2,8 @@ import React from "react";
 import "./ShoppingCartItem.css";
 import { useStateValue } from "./StateProvider";
 
-function ShoppingCartItem({ id, title, price, image, rating }) {
-  const [dispatch] = useStateValue();
+function ShoppingCartItem({ id, title, price, image, rating, ref }) {
+  const [, dispatch] = useStateValue();
 
   const removeFromBasket = () => {
     dispatch({
