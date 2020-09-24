@@ -3,7 +3,7 @@
 #Firebase
 /src/firebase.js
 .firebaserc
-/.firebase
+.firebase
 
 # dependencies
 /node_modules
