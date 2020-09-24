@@ -11,10 +11,9 @@ import Payment from "./Payment";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./Orders";
+import config from "./config";
 
-const promise = loadStripe(
-  "pk_test_51HUcS7LZ02BD0ExwQQCQdjRh59d53FLA7DxQbarA9qovj38Rbh57gD1gL2GHPnmW857wmL68gftH3UkGYwJxCEdj00VOdXHxjB"
-);
+const promise = loadStripe(config.public);
 
 function App() {
   const [, dispatch] = useStateValue();
